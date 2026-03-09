@@ -1,0 +1,28 @@
+> === VNPAY DEBUG INFO ===
+  Secret Key: 17NNGXL3FCWJ06G5XFAVNE27J8PYF2KR
+  Hash Data String: vnp_Amount=95190000&vnp_Command=pay&vnp_CreateDate=20260304094857&vnp_CurrCode=VND&vnp_IpAddr=0%3A0%3A0%3A0%3A0%3A0%3A0%3A1&vnp_Locale=vn&vnp_OrderInfo=Thanh%20toan%20don%20hang&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A3000%2Fcheck-payment&vnp_TmnCode=1YQ80PHL&vnp_TxnRef=1772592537316&vnp_Version=2.1.0
+  Generated Secure Hash: 48e34c62277bedb1273786de7d962b74a3b9fe5d13f75497f864510c998d636e184d2c86949db8fd7b2bc4dd8f21662582a8dd50f65b02035abbceb0c1cc0c49
+  Query String: vnp_Amount=95190000&vnp_Command=pay&vnp_CreateDate=20260304094857&vnp_CurrCode=VND&vnp_IpAddr=0%3A0%3A0%3A0%3A0%3A0%3A0%3A1&vnp_Locale=vn&vnp_OrderInfo=Thanh%20toan%20don%20hang&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A3000%2Fcheck-payment&vnp_TmnCode=1YQ80PHL&vnp_TxnRef=1772592537316&vnp_Version=2.1.0
+  ========================
+  2026-03-04T09:49:00.644+07:00 DEBUG 11084 --- [back-end] [nio-8080-exec-8] org.hibernate.SQL                        : 
+      select
+          ghct1_0.id,
+          ghct1_0.gia,
+          ghct1_0.idKhachHang,
+> === VNPAY DEBUG INFO ===
+  Secret Key: 17NNGXL3FCWJ06G5XFAVNE27J8PYF2KR
+  Hash Data String: vnp_Amount=95190000&vnp_Command=pay&vnp_CreateDate=20260304095000&vnp_CurrCode=VND&vnp_IpAddr=0%3A0%3A0%3A0%3A0%3A0%3A0%3A1&vnp_Locale=vn&vnp_OrderInfo=Thanh%20toan%20don%20hang&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A3000%2Fcheck-payment&vnp_TmnCode=1YQ80PHL&vnp_TxnRef=1772592600709&vnp_Version=2.1.0
+  Generated Secure Hash: 0217b9d647187125cd55833493dffe513f4e1a4c6aa8a3e7e76e326ce7ae337bc6b81554c68556e6fa568960a3240cdea01cf0ed26b64a1f455c8956ab0a4e6e
+  Query String: vnp_Amount=95190000&vnp_Command=pay&vnp_CreateDate=20260304095000&vnp_CurrCode=VND&vnp_IpAddr=0%3A0%3A0%3A0%3A0%3A0%3A0%3A1&vnp_Locale=vn&vnp_OrderInfo=Thanh%20toan%20don%20hang&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A3000%2Fcheck-payment&vnp_TmnCode=1YQ80PHL&vnp_TxnRef=1772592600709&vnp_Version=2.1.0
+  ========================
+  2026-03-04T09:59:04.542+07:00 DEBUG 11084 --- [back-end] [io-8080-exec-10] org.hibernate.SQL                        : 
+      select
+          ghct1_0.id,
+          ghct1_0.gia,
+          ghct1_0.idKhachHang,
+> === VNPAY DEBUG INFO ===
+  Secret Key: 17NNGXL3FCWJ06G5XFAVNE27J8PYF2KR
+  Hash Data String: vnp_Amount=95190000&vnp_Command=pay&vnp_CreateDate=20260304095939&vnp_CurrCode=VND&vnp_IpAddr=0%3A0%3A0%3A0%3A0%3A0%3A0%3A1&vnp_Locale=vn&vnp_OrderInfo=Thanh%20toan%20don%20hang&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A3000%2Fcheck-payment&vnp_TmnCode=1YQ80PHL&vnp_TxnRef=1772593179627&vnp_Version=2.1.0
+  Generated Secure Hash: 704c1cf7f03a34338c9c8205a643bee57aeca52331981e0391a2aed30be9dca25900f3cb6697624b9ffb2ba28bbe0c5c95d24b90125aa18245c3256f061de408
+  Query String: vnp_Amount=95190000&vnp_Command=pay&vnp_CreateDate=20260304095939&vnp_CurrCode=VND&vnp_IpAddr=0%3A0%3A0%3A0%3A0%3A0%3A0%3A1&vnp_Locale=vn&vnp_OrderInfo=Thanh%20toan%20don%20hang&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A3000%2Fcheck-payment&vnp_TmnCode=1YQ80PHL&vnp_TxnRef=1772593179627&vnp_Version=2.1.0
+  ========================

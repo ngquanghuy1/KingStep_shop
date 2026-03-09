@@ -1,0 +1,790 @@
+/* src/AdminPanel.css */
+
+body, html {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Inter', Arial, sans-serif;
+  background: #f6f8fb;
+  color: #222;
+}
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.admin-sidebar {
+  width: 220px;
+  background: #001529; /* Dark background for a professional look */
+  padding: 20px 0;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-menu-item {
+  margin: 16px 0;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.65); /* Lighter text for dark background */
+  padding: 8px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.admin-menu-item:hover {
+  color: #fff;
+  background: #1890ff; /* Ant Design primary blue */
+}
+
+.admin-menu-item.active {
+  color: #fff;
+  background: #1890ff; /* Active item background */
+  font-weight: bold;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 32px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+/* Styling for pages within admin content */
+.page-header {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* General table and form styling for Ant Design components */
+.ant-table-wrapper {
+  margin-top: 20px;
+}
+
+.ant-form-item {
+  margin-bottom: 20px;
+}
+
+/* Bảng sản phẩm đẹp mắt */
+.cart-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 36px rgba(25,118,210,0.09);
+  overflow: hidden;
+  margin-bottom: 36px;
+  font-size: 16px;
+}
+.cart-table th, .cart-table td {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 16px;
+}
+.cart-table th {
+  background: linear-gradient(90deg, #1565c0 60%, #1976d2 100%) !important;
+  color: #fff !important;
+  font-weight: 800 !important;
+  font-size: 17px !important;
+  border-bottom: 3px solid #1976d2 !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.10) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.08) !important;
+}
+.cart-table tbody tr {
+  transition: background 0.22s, box-shadow 0.18s;
+}
+.cart-table tbody tr:hover {
+  background: #e3f0ff;
+  box-shadow: 0 2px 12px rgba(25,118,210,0.07);
+}
+.cart-table td {
+  border-bottom: 1.5px solid #f0f0f0;
+}
+.cart-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Nút hành động đẹp, tròn, dịu, có icon */
+button {
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 20px 8px 16px;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.12s;
+  outline: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 1px 4px rgba(25,118,210,0.04);
+}
+button[style*='#43a047'] { background: #e8f5e9; color: #388e3c; }
+button[style*='#e53935'] { background: #ffebee; color: #d32f2f; }
+button[style*='#1976d2'] { background: #e3f2fd; color: #1976d2; }
+button[style*='#ff9800'] { background: #fff3e0; color: #f57c00; }
+button:hover {
+  filter: brightness(1.09);
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.13);
+  transform: translateY(-2px) scale(1.04);
+}
+button svg, button .icon {
+  font-size: 18px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Modal đẹp, hiện đại */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 40px 30px 40px;
+  min-width: 420px;
+  max-width: 96vw;
+  box-shadow: 0 12px 48px rgba(25,118,210,0.15);
+  position: relative;
+  animation: modalFadeIn 0.2s;
+}
+@keyframes modalFadeIn {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Làm đẹp input, select HTML thuần */
+input[type="text"], input[type="number"], select {
+  border: 1.5px solid #b6c6e3;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  background: #fafdff;
+  margin-bottom: 10px;
+  transition: border 0.18s, box-shadow 0.18s, background 0.18s;
+}
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+  border: 2px solid #1976d2;
+  background: #fff;
+  box-shadow: 0 0 0 2px #e3f0ff;
+}
+input[type="text"]:hover, input[type="number"]:hover, select:hover {
+  background: #f0f7ff;
+}
+
+/* Làm đẹp input, select của Ant Design */
+.ant-input, .ant-select-selector {
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  font-size: 16px !important;
+  background: #fafdff !important;
+  border: 1.5px solid #b6c6e3 !important;
+  transition: border 0.18s, box-shadow 0.18s, background 0.18s;
+}
+.ant-input:focus, .ant-select-focused .ant-select-selector {
+  border: 2px solid #1976d2 !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 2px #e3f0ff !important;
+}
+.ant-input:hover, .ant-select-selector:hover {
+  background: #f0f7ff !important;
+}
+
+/* Override mạnh cho .ant-input (Ant Design) */
+.ant-input {
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  font-size: 16px !important;
+  background: #fafdff !important;
+  border: 1.5px solid #b6c6e3 !important;
+  transition: border 0.18s, box-shadow 0.18s, background 0.18s !important;
+  margin-bottom: 10px !important;
+}
+.ant-input:focus {
+  border: 2px solid #1976d2 !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 2px #e3f0ff !important;
+}
+.ant-input:hover {
+  background: #f0f7ff !important;
+}
+
+/* Tiêu đề, section */
+h2, h3, h4 {
+  color: #1976d2;
+  font-weight: 800;
+  margin-bottom: 18px;
+  letter-spacing: 0.2px;
+}
+
+/* Khoảng cách section */
+.banhang-container, .modal-content {
+  margin-bottom: 36px;
+}
+
+/* Ẩn scroll ngang bảng khi không cần thiết */
+.cart-table {
+  overflow-x: auto;
+}
+
+/* Thanh tìm kiếm/filter đẹp */
+.banhang-container input[type="text"], .banhang-container select {
+  margin-bottom: 0;
+  margin-right: 12px;
+  min-width: 160px;
+  background: #fafdff;
+  border: 1.5px solid #b6c6e3;
+  border-radius: 7px;
+  padding: 10px 14px;
+  font-size: 16px;
+}
+.banhang-container input[type="text"]:focus, .banhang-container select:focus {
+  border: 2px solid #1976d2;
+  background: #fff;
+}
+.banhang-container input[type="text"]:hover, .banhang-container select:hover {
+  background: #f0f7ff;
+}
+
+/* Sidebar hover */
+.ant-menu-item-selected, .ant-menu-item-active {
+  background: #e3f0ff !important;
+  color: #1976d2 !important;
+}
+
+/* Thanh công cụ sản phẩm 2 hàng đẹp, hiện đại */
+.product-toolbar {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(25,118,210,0.07);
+  padding: 24px 24px 12px 24px;
+  margin-bottom: 24px;
+}
+.toolbar-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.toolbar-row .spacer {
+  flex: 1;
+}
+.search-input {
+  min-width: 220px;
+  max-width: 320px;
+  flex: 1 1 220px;
+  border-radius: 8px;
+  border: 1.5px solid #b6c6e3;
+  padding: 10px 16px;
+  font-size: 16px;
+  background: #fafdff;
+}
+.btn {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s;
+}
+.btn.blue { background: #1976d2; color: #fff; }
+.btn.orange { background: #ffa726; color: #fff; }
+.btn.red { background: #ef5350; color: #fff; }
+.btn.create-btn { margin-left: auto; }
+
+.filters {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.filters > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 180px;
+}
+.filters label {
+  font-weight: 600;
+  color: #222;
+}
+.filters select {
+  border-radius: 7px;
+  border: 1.5px solid #b6c6e3;
+  padding: 8px 12px;
+  font-size: 15px;
+  background: #fafdff;
+  min-width: 90px;
+}
+
+/* ========== ADMIN UI ĐẸP MẮT (trừ trang Sản Phẩm) ========== */
+
+/* Bảng chung (trừ .cart-table) */
+table:not(.cart-table) {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(25,118,210,0.08);
+  overflow: hidden;
+  margin-bottom: 32px;
+  font-size: 15px;
+}
+table:not(.cart-table) th, table:not(.cart-table) td {
+  padding: 13px 15px;
+  text-align: left;
+}
+table:not(.cart-table) th {
+  background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: 2px solid #e3eafc;
+}
+table:not(.cart-table) tbody tr {
+  transition: background 0.2s;
+}
+table:not(.cart-table) tbody tr:hover {
+  background: #f0f7ff;
+}
+table:not(.cart-table) td {
+  border-bottom: 1px solid #f0f0f0;
+}
+table:not(.cart-table) tr:last-child td {
+  border-bottom: none;
+}
+
+/* Modal chung */
+.admin-content-page .modal-overlay, .admin-content-page .ant-modal-root {
+  background: rgba(0,0,0,0.18) !important;
+  z-index: 9999;
+}
+.admin-content-page .modal-content, .admin-content-page .ant-modal-content {
+  background: #fff !important;
+  border-radius: 18px !important;
+  padding: 36px 36px 28px 36px !important;
+  min-width: 420px;
+  max-width: 96vw;
+  box-shadow: 0 12px 48px rgba(25,118,210,0.13) !important;
+  animation: modalFadeIn 0.2s;
+}
+
+/* Nút hành động chung (trừ .btn, .cart-table button) */
+.admin-content-page button:not(.btn):not(.cart-table button) {
+  border-radius: 7px;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  background: #e3f2fd;
+  color: #1976d2;
+  margin: 0 2px;
+}
+.admin-content-page button:not(.btn):not(.cart-table button):hover {
+  background: #1976d2;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(25, 118, 210, 0.10);
+}
+
+/* Input, select chung (trừ .product-toolbar, .cart-table) */
+.admin-content-page input[type="text"],
+.admin-content-page input[type="number"],
+.admin-content-page select {
+  border: 1.5px solid #b6c6e3;
+  border-radius: 7px;
+  padding: 10px 14px;
+  font-size: 15px;
+  background: #fafdff;
+  margin-bottom: 8px;
+  transition: border 0.18s, box-shadow 0.18s, background 0.18s;
+}
+.admin-content-page input[type="text"]:focus,
+.admin-content-page input[type="number"]:focus,
+.admin-content-page select:focus {
+  border: 2px solid #1976d2;
+  background: #fff;
+  box-shadow: 0 0 0 2px #e3f0ff;
+}
+.admin-content-page input[type="text"]:hover,
+.admin-content-page input[type="number"]:hover,
+.admin-content-page select:hover {
+  background: #f0f7ff;
+}
+
+/* Ant Design input/select chung */
+.admin-content-page .ant-input, .admin-content-page .ant-select-selector {
+  border-radius: 7px !important;
+  padding: 10px 14px !important;
+  font-size: 15px !important;
+  background: #fafdff !important;
+  border: 1.5px solid #b6c6e3 !important;
+  transition: border 0.18s, box-shadow 0.18s, background 0.18s;
+}
+.admin-content-page .ant-input:focus, .admin-content-page .ant-select-focused .ant-select-selector {
+  border: 2px solid #1976d2 !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 2px #e3f0ff !important;
+}
+.admin-content-page .ant-input:hover, .admin-content-page .ant-select-selector:hover {
+  background: #f0f7ff !important;
+}
+
+/* Sidebar, header, section */
+.ant-layout-sider {
+  background: #182848 !important;
+  color: #fff;
+  border-radius: 0 18px 18px 0;
+  box-shadow: 2px 0 12px rgba(25,118,210,0.07);
+}
+.ant-menu {
+  background: transparent !important;
+}
+.ant-menu-item {
+  border-radius: 8px !important;
+  margin: 4px 0 !important;
+  font-size: 16px !important;
+  font-weight: 500;
+  transition: background 0.18s, color 0.18s;
+}
+.ant-menu-item-selected, .ant-menu-item-active {
+  background: #e3f0ff !important;
+  color: #1976d2 !important;
+}
+
+.admin-content-page h2, .admin-content-page h3, .admin-content-page h4 {
+  color: #1976d2;
+  font-weight: 800;
+  margin-bottom: 18px;
+  letter-spacing: 0.2px;
+}
+
+.admin-content-page {
+  margin-bottom: 36px;
+}
+
+@keyframes modalFadeIn {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ========== END ADMIN UI ========== */
+
+/* Logo góc trên sidebar */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 0 8px 0;
+}
+.sidebar-logo img {
+  height: 44px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+  background: #fff;
+}
+.sidebar-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.swal2-container {
+  z-index: 99999 !important;
+}
+
+/* User dropdown styles */
+.user-dropdown {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.user-dropdown:hover {
+  background: #e3f0ff;
+  border-color: #1976d2;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.1);
+}
+
+.ant-dropdown-menu {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #e9ecef !important;
+}
+
+.ant-dropdown-menu-item {
+  padding: 8px 16px !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-dropdown-menu-item:hover {
+  background: #e3f0ff !important;
+  color: #1976d2 !important;
+}
+
+.ant-dropdown-menu-item-divider {
+  margin: 4px 0 !important;
+  border-color: #e9ecef !important;
+} 
+
+/* Style cho danh sách hóa đơn chờ dạng tab ngang */
+.bhtq-order-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 18px 0;
+}
+.bhtq-order-tab {
+  background: #f4f6fb;
+  color: #1976d2;
+  border: 1.5px solid #1976d2;
+  border-radius: 8px 8px 0 0;
+  padding: 7px 18px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+  min-width: 90px;
+  text-align: center;
+}
+.bhtq-order-tab.active {
+  background: #1976d2;
+  color: #fff;
+  border-bottom: 2.5px solid #fff;
+  z-index: 2;
+}
+.bhtq-order-tab:hover:not(.active) {
+  background: #e3f0ff;
+}
+@media (max-width: 700px) {
+  .bhtq-order-tab {
+    font-size: 12px;
+    padding: 5px 8px;
+    min-width: 60px;
+  }
+  .bhtq-order-tabs {
+    gap: 4px;
+  }
+} 
+
+/* Tùy chỉnh Switch của Ant Design cho giống ảnh mẫu trạng thái */
+.ant-switch {
+  width: 48px !important;
+  height: 24px !important;
+  min-width: 48px !important;
+  background: #e0e0e0 !important; /* Mặc định xám nhạt */
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  transition: background 0.2s;
+}
+
+.ant-switch-checked {
+  background: #1677ff !important; /* Checked mới xanh */
+}
+
+.ant-switch-handle {
+  width: 20px !important;
+  height: 20px !important;
+  top: 2px !important;
+  left: 2px !important;
+  background: #fff !important;
+  border-radius: 50% !important; /* Bo tròn hoàn toàn */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08) !important; /* Bóng nhẹ */
+  transition: left 0.2s, background 0.2s;
+}
+
+.ant-switch-checked .ant-switch-handle {
+  left: calc(100% - 22px) !important;
+}
+
+.ant-switch-inner {
+  display: none !important;
+}
+
+/* UserInfo component styling */
+.user-info-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-info-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.user-info-role {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* Logout button styling */
+.logout-button {
+  transition: all 0.3s ease !important;
+}
+
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+}
+
+.logout-button:active {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Dropdown menu styling */
+.ant-dropdown {
+  z-index: 1000 !important;
+}
+
+.ant-dropdown-menu {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+  border: 1px solid #e9ecef !important;
+  padding: 4px 0 !important;
+}
+
+.ant-dropdown-menu-item {
+  padding: 8px 16px !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+  border-radius: 4px !important;
+  margin: 2px 8px !important;
+}
+
+.ant-dropdown-menu-item:hover {
+  background: #e3f0ff !important;
+  color: #1976d2 !important;
+}
+
+.ant-dropdown-menu-item-divider {
+  margin: 4px 8px !important;
+  border-color: #e9ecef !important;
+}
+
+/* User dropdown trigger styling */
+.user-dropdown {
+  background: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  transition: all 0.3s ease !important;
+}
+
+.user-dropdown:hover {
+  background: #e9ecef !important;
+  border-color: #dee2e6 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+} 
+
+/* ✅ THÊM: CSS cho thanh tìm kiếm và lọc voucher */
+.search-filter-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+}
+
+.search-filter-card .ant-card-body {
+  padding: 20px;
+}
+
+.search-filter-card .ant-input-search {
+  border-radius: 6px;
+}
+
+.search-filter-card .ant-select {
+  border-radius: 6px;
+}
+
+.search-filter-card .ant-btn {
+  border-radius: 6px;
+  height: 40px;
+  font-weight: 500;
+}
+
+.search-filter-card .text-muted {
+  color: #8c8c8c;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Responsive cho thanh tìm kiếm */
+@media (max-width: 768px) {
+  .search-filter-card .ant-col {
+    margin-bottom: 16px;
+  }
+  
+  .search-filter-card .ant-col:last-child {
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+/* Loading state cho bảng */
+.ant-table-wrapper .ant-spin-container {
+  min-height: 200px;
+}
+
+/* Hover effect cho các nút trong thanh tìm kiếm */
+.search-filter-card .ant-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Focus state cho input tìm kiếm */
+.search-filter-card .ant-input-search .ant-input:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Focus state cho select */
+.search-filter-card .ant-select-focused .ant-select-selector {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+} 

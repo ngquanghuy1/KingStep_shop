@@ -1,0 +1,105 @@
+==========================================
+DANH SÁCH ẢNH SẢN PHẨM CẦN THIẾT
+==========================================
+
+Dựa trên các sản phẩm giày hiện có trong hệ thống, bạn cần chuẩn bị các ảnh sau:
+
+------------------------------------------
+THƯƠNG HIỆU: NIKE
+------------------------------------------
+1. nike-air-max-90.jpg
+2. nike-air-max-97.jpg
+3. nike-air-max-270.jpg
+4. nike-air-jordan-1.jpg
+5. nike-air-force-1.jpg
+6. nike-dunk-low.jpg
+7. nike-react-element.jpg
+8. nike-blazer.jpg
+9. nike-cortez.jpg
+10. nike-pegasus.jpg
+
+------------------------------------------
+THƯƠNG HIỆU: ADIDAS
+------------------------------------------
+1. adidas-ultraboost-22.jpg
+2. adidas-ultraboost-dna.jpg
+3. adidas-superstar.jpg
+4. adidas-stan-smith.jpg
+5. adidas-yeezy.jpg
+6. adidas-nmd.jpg
+7. adidas-gazelle.jpg
+8. adidas-samba.jpg
+9. adidas-forum.jpg
+10. adidas-originals.jpg
+
+------------------------------------------
+THƯƠNG HIỆU: PUMA
+------------------------------------------
+1. puma-suede.jpg
+2. puma-rs-x.jpg
+3. puma-future.jpg
+4. puma-speedcat.jpg
+5. puma-cali.jpg
+
+------------------------------------------
+THƯƠNG HIỆU: NEW BALANCE
+------------------------------------------
+1. new-balance-550.jpg
+2. new-balance-574.jpg
+3. new-balance-990.jpg
+4. new-balance-327.jpg
+5. new-balance-530.jpg
+
+------------------------------------------
+THƯƠNG HIỆU: ASICS
+------------------------------------------
+1. asics-gel-kayano.jpg
+2. asics-gel-nimbus.jpg
+3. asics-gt-2000.jpg
+4. asics-gel-quantum.jpg
+
+------------------------------------------
+DANH MỤC: SNEAKER
+------------------------------------------
+- Các ảnh giày sneaker của tất cả thương hiệu
+
+------------------------------------------
+DANH MỤC: THỂ THAO
+------------------------------------------
+- Các ảnh giày thể thao chuyên dụng
+
+------------------------------------------
+DANH MỤC: CHẠY BỘ
+------------------------------------------
+- Các ảnh giày chạy bộ (running shoes)
+
+------------------------------------------
+DANH MỤC: THỜI TRANG
+------------------------------------------
+- Các ảnh giày thời trang, casual
+
+------------------------------------------
+DANH MỤC: BÓNG RỔ
+------------------------------------------
+- Các ảnh giày bóng rổ
+
+==========================================
+HƯỚNG DẪN:
+==========================================
+
+1. Tải ảnh từ internet hoặc chụp ảnh sản phẩm thật
+2. Đặt tên file theo danh sách trên
+3. Đặt ảnh vào folder tương ứng:
+   - public/products/nike/ cho Nike
+   - public/products/adidas/ cho Adidas
+   - public/products/puma/ cho Puma
+   - public/products/new-balance/ cho New Balance
+   - public/products/asics/ cho Asics
+   - public/products/other/ cho thương hiệu khác
+
+4. Kích thước ảnh đề xuất: 800x800px hoặc 1000x1000px
+5. Định dạng: JPG hoặc PNG
+6. Chất lượng: Độ phân giải cao, nền trắng
+
+==========================================
+

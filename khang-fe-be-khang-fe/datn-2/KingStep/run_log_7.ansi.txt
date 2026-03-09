@@ -1,0 +1,102 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.example:back-end >------------------------
+[INFO] Building back-end 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.0:run (default-cli) > test-compile @ back-end >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ back-end ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ back-end ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ back-end ---
+[INFO] skip non existing resourceDirectory E:\khang-fe-be-khang-fe\datn-2\Sport-Line\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ back-end ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.5.0:run (default-cli) < test-compile @ back-end <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.0:run (default-cli) @ back-end ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2026-03-03T16:19:02.160+07:00  INFO 24572 --- [back-end] [  restartedMain] com.example.backend.BackEndApplication   : Starting BackEndApplication using Java 17.0.12 with PID 24572 (E:\khang-fe-be-khang-fe\datn-2\Sport-Line\target\classes started by ngova in E:\khang-fe-be-khang-fe\datn-2\Sport-Line)
+2026-03-03T16:19:02.162+07:00  INFO 24572 --- [back-end] [  restartedMain] com.example.backend.BackEndApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-03-03T16:19:02.199+07:00  INFO 24572 --- [back-end] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-03T16:19:02.199+07:00  INFO 24572 --- [back-end] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-03T16:19:02.871+07:00  INFO 24572 --- [back-end] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-03T16:19:02.949+07:00  INFO 24572 --- [back-end] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 15 JPA repository interfaces.
+2026-03-03T16:19:03.547+07:00  INFO 24572 --- [back-end] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-03T16:19:03.558+07:00  INFO 24572 --- [back-end] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-03T16:19:03.559+07:00  INFO 24572 --- [back-end] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-03-03T16:19:03.712+07:00  INFO 24572 --- [back-end] [  restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-03-03T16:19:03.718+07:00  INFO 24572 --- [back-end] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-03T16:19:03.719+07:00  INFO 24572 --- [back-end] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1518 ms
+2026-03-03T16:19:03.859+07:00  INFO 24572 --- [back-end] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-03T16:19:03.888+07:00  INFO 24572 --- [back-end] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-03-03T16:19:03.912+07:00  INFO 24572 --- [back-end] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-03T16:19:04.199+07:00  INFO 24572 --- [back-end] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-03T16:19:04.220+07:00  INFO 24572 --- [back-end] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-03T16:19:04.442+07:00  INFO 24572 --- [back-end] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 1ea5d830-4ccc-42b6-af98-069ea6665b8c
+2026-03-03T16:19:04.443+07:00  INFO 24572 --- [back-end] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-03T16:19:04.469+07:00  WARN 24572 --- [back-end] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-03T16:19:04.495+07:00  INFO 24572 --- [back-end] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-03T16:19:05.538+07:00  INFO 24572 --- [back-end] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-03T16:19:05.540+07:00  INFO 24572 --- [back-end] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+GHN Token: 55bb4252-5665-11f0-9b81-222185cb68c8
+Shop ID: 196987
+Base URL: https://dev-online-gateway.ghn.vn/shiip/public-api
+2026-03-03T16:19:05.884+07:00  INFO 24572 --- [back-end] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+Config loaded ? Token: 55bb4252-5665-11f0-9b81-222185cb68c8, ShopId: 196987
+2026-03-03T16:19:07.218+07:00  WARN 24572 --- [back-end] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-03T16:19:07.422+07:00  WARN 24572 --- [back-end] [  restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-03-03T16:19:07.575+07:00  WARN 24572 --- [back-end] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-03-03T16:19:07.602+07:00  WARN 24572 --- [back-end] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-03-03T16:19:07.604+07:00  INFO 24572 --- [back-end] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-03T16:19:07.605+07:00  INFO 24572 --- [back-end] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-03T16:19:07.610+07:00  INFO 24572 --- [back-end] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-03T16:19:07.622+07:00  INFO 24572 --- [back-end] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-03T16:19:07.638+07:00 ERROR 24572 --- [back-end] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.177 s
+[INFO] Finished at: 2026-03-03T16:19:07+07:00
+[INFO] ------------------------------------------------------------------------

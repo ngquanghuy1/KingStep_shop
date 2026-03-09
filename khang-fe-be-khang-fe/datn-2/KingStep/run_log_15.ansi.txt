@@ -1,0 +1,6 @@
+> === VNPAY DEBUG INFO ===
+  Secret Key: 17NNGXL3FCWJ06G5XFAVNE27J8PYF2KR
+  Hash Data String: vnp_Amount=95190000&vnp_Command=pay&vnp_CreateDate=20260304120007&vnp_CurrCode=VND&vnp_IpAddr=0%3A0%3A0%3A0%3A0%3A0%3A0%3A1&vnp_Locale=vn&vnp_OrderInfo=Thanh%20toan%20don%20hang&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A3000%2Fcheck-payment&vnp_TmnCode=1YQ80PHL&vnp_TxnRef=1772600407858&vnp_Version=2.1.0
+  Generated Secure Hash: 48d6c2bb83e47899ee9773ae631481eb4db1ad1c1e4056db136e0efaceeedf78f1ef9cff0d0fcf04e6275cf6eac8bd51bffc089e9a567fb27d7ff605d1803e77
+  Query String: vnp_Amount=95190000&vnp_Command=pay&vnp_CreateDate=20260304120007&vnp_CurrCode=VND&vnp_IpAddr=0%3A0%3A0%3A0%3A0%3A0%3A0%3A1&vnp_Locale=vn&vnp_OrderInfo=Thanh%20toan%20don%20hang&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A3000%2Fcheck-payment&vnp_TmnCode=1YQ80PHL&vnp_TxnRef=1772600407858&vnp_Version=2.1.0
+  ========================

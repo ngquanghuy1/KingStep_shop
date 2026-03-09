@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test GHN API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test GHN API</h1>
+    
+    <div class="test-section">
+        <h3>1. Test Provinces API</h3>
+        <button onclick="testProvinces()">Test Provinces</button>
+        <div id="provinces-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>2. Test Calculate Fee API</h3>
+        <button onclick="testCalculateFee()">Test Calculate Fee</button>
+        <div id="calculate-fee-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>3. Test Calculate Fee with Fixed Data</h3>
+        <button onclick="testCalculateFeeFixed()">Test Calculate Fee (Fixed)</button>
+        <div id="calculate-fee-fixed-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>4. Test Backend Directly</h3>
+        <button onclick="testBackendDirectly()">Test Backend Directly</button>
+        <div id="backend-test-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>5. Test Alternative Backend</h3>
+        <button onclick="testBackendAlternative()">Test Backend Alternative</button>
+        <div id="backend-alternative-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>6. Test Available Services (Hà Nội -> TP.HCM)</h3>
+        <button onclick="testAvailableServices()">Test Available Services</button>
+        <div id="available-services-result" class="result"></div>
+    </div>
+    
+    <div class="test-section">
+        <h3>7. Test Available Services (Hà Nội nội thành)</h3>
+        <button onclick="testAvailableServicesHanoi()">Test Available Services Hanoi</button>
+        <div id="available-services-hanoi-result" class="result"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8080';
+        
+        async function testProvinces() {
+            const resultDiv = document.getElementById('provinces-result');
+            resultDiv.textContent = 'Testing...';
+            resultDiv.className = 'result';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/ghn/provinces`);
+                const data = await response.json();
+                
+                resultDiv.textContent = `Status: ${response.status}\nResponse: ${JSON.stringify(data, null, 2)}`;
+                resultDiv.className = response.ok ? 'result success' : 'result error';
+            } catch (error) {
+                resultDiv.textContent = `Error: ${error.message}`;
+                resultDiv.className = 'result error';
+            }
+        }
+        
+        async function testCalculateFee() {
+            const resultDiv = document.getElementById('calculate-fee-result');
+            resultDiv.textContent = 'Testing...';
+            resultDiv.className = 'result';
+            
+            try {
+                const requestBody = {
+                    fromDistrict: 1450,
+                    toDistrict: 2025,
+                    toWardCode: '90737',
+                    weight: 500
+                };
+                
+                const response = await fetch(`${API_BASE}/api/ghn/calculate-fee`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+                
+                const data = await response.json();
+                
+                resultDiv.textContent = `Status: ${response.status}\nRequest: ${JSON.stringify(requestBody, null, 2)}\nResponse: ${JSON.stringify(data, null, 2)}`;
+                resultDiv.className = response.ok ? 'result success' : 'result error';
+            } catch (error) {
+                resultDiv.textContent = `Error: ${error.message}`;
+                resultDiv.className = 'result error';
+            }
+        }
+        
+        async function testCalculateFeeFixed() {
+            const resultDiv = document.getElementById('calculate-fee-fixed-result');
+            resultDiv.textContent = 'Testing...';
+            resultDiv.className = 'result';
+            
+            try {
+                const requestBody = {
+                    fromDistrict: 1450,
+                    toDistrict: 2046,
+                    toWardCode: '220906',
+                    weight: 500
+                };
+                
+                const response = await fetch(`${API_BASE}/api/ghn/calculate-fee`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+                
+                const data = await response.json();
+                
+                resultDiv.textContent = `Status: ${response.status}\nRequest: ${JSON.stringify(requestBody, null, 2)}\nResponse: ${JSON.stringify(data, null, 2)}`;
+                resultDiv.className = response.ok ? 'result success' : 'result error';
+            } catch (error) {
+                resultDiv.textContent = `Error: ${error.message}`;
+                resultDiv.className = 'result error';
+            }
+        }
+        
+        async function testBackendDirectly() {
+            const resultDiv = document.getElementById('backend-test-result');
+            resultDiv.textContent = 'Testing...';
+            resultDiv.className = 'result';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/ghn/test-calculate-fee`);
+                const data = await response.json();
+                
+                resultDiv.textContent = `Status: ${response.status}\nResponse: ${JSON.stringify(data, null, 2)}`;
+                resultDiv.className = response.ok ? 'result success' : 'result error';
+            } catch (error) {
+                resultDiv.textContent = `Error: ${error.message}`;
+                resultDiv.className = 'result error';
+            }
+        }
+        
+        async function testBackendAlternative() {
+            const resultDiv = document.getElementById('backend-alternative-result');
+            resultDiv.textContent = 'Testing...';
+            resultDiv.className = 'result';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/ghn/test-calculate-fee-alt`);
+                const data = await response.json();
+                
+                resultDiv.textContent = `Status: ${response.status}\nResponse: ${JSON.stringify(data, null, 2)}`;
+                resultDiv.className = response.ok ? 'result success' : 'result error';
+            } catch (error) {
+                resultDiv.textContent = `Error: ${error.message}`;
+                resultDiv.className = 'result error';
+            }
+        }
+        
+        async function testAvailableServices() {
+            const resultDiv = document.getElementById('available-services-result');
+            resultDiv.textContent = 'Testing...';
+            resultDiv.className = 'result';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/ghn/test-available-services`);
+                const data = await response.json();
+                
+                resultDiv.textContent = `Status: ${response.status}\nResponse: ${JSON.stringify(data, null, 2)}`;
+                resultDiv.className = response.ok ? 'result success' : 'result error';
+            } catch (error) {
+                resultDiv.textContent = `Error: ${error.message}`;
+                resultDiv.className = 'result error';
+            }
+        }
+        
+        async function testAvailableServicesHanoi() {
+            const resultDiv = document.getElementById('available-services-hanoi-result');
+            resultDiv.textContent = 'Testing...';
+            resultDiv.className = 'result';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/ghn/test-available-services-hanoi`);
+                const data = await response.json();
+                
+                resultDiv.textContent = `Status: ${response.status}\nResponse: ${JSON.stringify(data, null, 2)}`;
+                resultDiv.className = response.ok ? 'result success' : 'result error';
+            } catch (error) {
+                resultDiv.textContent = `Error: ${error.message}`;
+                resultDiv.className = 'result error';
+            }
+        }
+    </script>
+</body>
+</html> 

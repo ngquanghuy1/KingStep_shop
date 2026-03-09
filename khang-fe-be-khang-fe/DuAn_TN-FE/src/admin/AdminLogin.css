@@ -1,0 +1,207 @@
+.admin-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
+}
+
+.admin-login-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: 1;
+}
+
+.admin-login-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.admin-login-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+}
+
+.admin-login-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.admin-login-header {
+  text-align: center;
+  padding: 30px 30px 20px;
+}
+
+.admin-login-logo {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+.admin-login-title {
+  margin-bottom: 10px !important;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.admin-login-subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.admin-login-form {
+  padding: 0 30px 30px;
+}
+
+.admin-login-form .ant-form-item-label > label {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.admin-login-input {
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  padding: 12px 16px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.admin-login-input:hover {
+  border-color: #667eea;
+}
+
+.admin-login-input:focus,
+.admin-login-input.ant-input-focused {
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+.admin-login-input .ant-input-prefix {
+  color: #999;
+  margin-right: 8px;
+}
+
+.admin-login-button-container {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.admin-login-button {
+  height: 48px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.admin-login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.admin-login-button:active {
+  transform: translateY(0);
+}
+
+.admin-login-footer {
+  text-align: center;
+  padding: 20px 30px 30px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 20px;
+}
+
+.admin-login-demo-info {
+  font-size: 12px;
+  background: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .admin-login-content {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .admin-login-card {
+    border-radius: 15px;
+  }
+  
+  .admin-login-header {
+    padding: 20px 20px 15px;
+  }
+  
+  .admin-login-form {
+    padding: 0 20px 20px;
+  }
+  
+  .admin-login-footer {
+    padding: 15px 20px 20px;
+  }
+}
+
+/* Animation for card entrance */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-login-card {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Loading state styles */
+.admin-login-button.ant-btn-loading {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  opacity: 0.8;
+}
+
+/* Error state styles */
+.admin-login-form .ant-form-item-has-error .admin-login-input {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+}
+
+/* Success state styles */
+.admin-login-form .ant-form-item-has-success .admin-login-input {
+  border-color: #52c41a;
+  box-shadow: 0 0 0 2px rgba(82, 196, 26, 0.2);
+} 
