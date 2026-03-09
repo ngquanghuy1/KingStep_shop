@@ -2220,6 +2220,15 @@ const Payment = () => {
                     placeholder="Số điện thoại"
                   />
                 </div>
+                <div className="gx-payment-form-group" style={{ flex: 1 }}>
+                  <label>Email <span>*</span></label>
+                  <input
+                    className="gx-payment-input"
+                    value={customerEmail}
+                    onChange={e => setCustomerEmail(e.target.value)}
+                    placeholder="Email"
+                  />
+                </div>
               </div>
               <div className="gx-payment-form-group">
                 <label>Tỉnh/Thành phố, Quận/Huyện, Phường/Xã <span>*</span></label>
@@ -2253,8 +2262,14 @@ const Payment = () => {
               </Button>
               <Button
                 onClick={() => {
-                  if (!customerName || !customerPhone || !selectedProvince || !selectedDistrict || !selectedWard || !addressDetail) {
-                    toast.warning('Vui lòng nhập đầy đủ thông tin địa chỉ!');
+                  if (!customerName || !customerPhone || !customerEmail || !selectedProvince || !selectedDistrict || !selectedWard || !addressDetail) {
+                    toast.warning('Vui lòng nhập đầy đủ thông tin địa chỉ (bao gồm Email)!');
+                    return;
+                  }
+
+                  const emailRegex = /^[^\s@]+@gmail\.com$/i;
+                  if (!emailRegex.test(customerEmail.trim())) {
+                    toast.warning('Email phải có định dạng @gmail.com!');
                     return;
                   }
 
